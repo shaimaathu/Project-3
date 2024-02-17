@@ -58,35 +58,29 @@ class _CartPageState extends State<CartPage> {
                         color: Color.fromARGB(255, 13, 152, 106)),
                   ),
                 ),
-               GridView.count(
-      crossAxisCount: 3,
-      children:[
-
-        // ...List.generate(GetIt.I.get<AllData>().cart.length, (index) {
-        //   return SizedBox(
-        //           height: context.getWidth() / 5,
-        //           width: context.getWidth() / 5,
-        //           child: Stack(children: [
-        //             Positioned(
-        //               top: 45,
-        //               left: 22,
-        //               child: Image.asset(
-        //                 "assets/Rect.png",
-        //                 // color: Colors.amber,
-        //               ),
-        //             ),
-        //             Image.asset(
-        //               "assets/sage.png",
-        //               height: context.getWidth() / 5,
-        //               width: context.getWidth() / 5,
-        //             ),
-        //           ]),
-        //         ),
-
-          
-        // })
-      ]),
-                
+                GridView.count(crossAxisCount: 3, children: [
+                  // ...List.generate(GetIt.I.get<AllData>().cart.length, (index) {
+                  //   return SizedBox(
+                  //           height: context.getWidth() / 5,
+                  //           width: context.getWidth() / 5,
+                  //           child: Stack(children: [
+                  //             Positioned(
+                  //               top: 45,
+                  //               left: 22,
+                  //               child: Image.asset(
+                  //                 "assets/Rect.png",
+                  //                 // color: Colors.amber,
+                  //               ),
+                  //             ),
+                  //             Image.asset(
+                  //               "assets/sage.png",
+                  //               height: context.getWidth() / 5,
+                  //               width: context.getWidth() / 5,
+                  //             ),
+                  //           ]),),
+                  //
+                  // })
+                ]),
               ],
             ),
           ),
