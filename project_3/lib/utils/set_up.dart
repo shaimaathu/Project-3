@@ -6,4 +6,5 @@ Future<void> setup() async {
   await GetStorage.init();
   GetIt.instance;
   GetIt.I.registerSingleton<AllData>(AllData());
+  GetIt.I.get<AllData>().storage.erase();
 }

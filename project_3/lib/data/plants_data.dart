@@ -2,7 +2,7 @@ import 'dart:ui';
 
 List<Map<String, dynamic>> plantsData = [
   {
-    "name": "Peperomia ",
+    "name": "Peperomia Obtusfolia",
     "price": 19.99,
     "image_path": "assets/Peperomia.png",
     "type": "Indoor Plant",
@@ -14,6 +14,7 @@ List<Map<String, dynamic>> plantsData = [
     "fertilizer": 3,
     "rating": 4.0,
     "color": const Color.fromARGB(255, 176, 234, 213),
+    "quntity": 1
   },
   {
     "name": "Watermelon Peperomia",
@@ -28,6 +29,7 @@ List<Map<String, dynamic>> plantsData = [
     "fertilizer": 5,
     "rating": 4.5,
     "color": const Color.fromARGB(255, 255, 243, 204),
+    "quntity": 1
   },
   {
     "name": "Croton Petra",
@@ -42,6 +44,7 @@ List<Map<String, dynamic>> plantsData = [
     "fertilizer": 6,
     "rating": 4.3,
     "color": const Color.fromARGB(255, 171, 232, 211),
+    "quntity": 1
   },
   {
     "name": "Bird's Nest Fern",
@@ -56,6 +59,7 @@ List<Map<String, dynamic>> plantsData = [
     "fertilizer": 4,
     "rating": 4.6,
     "color": const Color.fromARGB(255, 194, 232, 164),
+    "quntity": 1
   },
   {
     "name": "Cactus",
@@ -70,6 +74,7 @@ List<Map<String, dynamic>> plantsData = [
     "fertilizer": 2,
     "rating": 4.8,
     "color": const Color.fromARGB(255, 229, 240, 161),
+    "quntity": 1
   },
   {
     "name": "Aloe Vera",
@@ -84,5 +89,6 @@ List<Map<String, dynamic>> plantsData = [
     "fertilizer": 3,
     "rating": 4.2,
     "color": const Color.fromARGB(255, 245, 237, 168),
+    "quntity": 1
   }
 ];

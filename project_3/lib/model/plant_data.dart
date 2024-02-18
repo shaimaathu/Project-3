@@ -1,3 +1,4 @@
+import 'dart:ui';
 
 class PlantDataModel {
   PlantDataModel({
@@ -22,8 +23,9 @@ class PlantDataModel {
   late final int light;
   late final int fertilizer;
   late final double rating;
-  
-  PlantDataModel.fromJson(Map<String, dynamic> json){
+  late int quntity;
+
+  PlantDataModel.fromJson(Map<String, dynamic> json) {
     name = json['name'];
     price = json['price'];
     imagePath = json['image_path'];
@@ -34,6 +36,7 @@ class PlantDataModel {
     light = json['light'];
     fertilizer = json['fertilizer'];
     rating = json['rating'];
+    quntity = json['quntity'];
   }
 
   Map<String, dynamic> toJson() {
@@ -48,10 +51,11 @@ class PlantDataModel {
     _data['light'] = light;
     _data['fertilizer'] = fertilizer;
     _data['rating'] = rating;
+    _data['quntity'] = quntity;
     return _data;
   }
 
-    Map<String, dynamic> toMap() {
+  Map<String, dynamic> toMap() {
     return {
       "name": name,
       "price": price,
@@ -63,6 +67,7 @@ class PlantDataModel {
       "light": light,
       "fertilizer": fertilizer,
       "rating": rating,
+      "quntity": quntity,
     };
   }
 }

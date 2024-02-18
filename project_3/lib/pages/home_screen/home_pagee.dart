@@ -150,7 +150,7 @@ class _HomePageState extends State<HomePage>
             const SizedBox(
               width: 20,
             ),
-            Image.asset("assets/menue.png")
+            Image.asset("assets/search.png")
           ],
         ),
         TabBar(
@@ -319,6 +319,7 @@ class _HomePageState extends State<HomePage>
                   color: colors[index],
                   prise: plant.price,
                   onTapCard: () {
+                    
                     context.pushTo(
                       view: PlantDisplayPage(
                           plant: plant,
@@ -395,7 +396,8 @@ class _HomePageState extends State<HomePage>
                     plant: plant,
                   );
                 } else {
-                  return Text(" ");
+                  return const SizedBox(width: 1,);
+                
                 }
               }),
             ]),
@@ -424,7 +426,7 @@ class _HomePageState extends State<HomePage>
                     plant: plant,
                   );
                 } else {
-                  return const Text(" ");
+                  return const SizedBox(width: 1,);
                 }
               }),
             ]),

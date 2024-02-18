@@ -16,14 +16,13 @@ class AllData {
     // storage.erase();
     loudData();
     getAllPlants();
-
   }
 
   getAllPlants() async {
     if (plants.isEmpty) {
-      plantsData.map((item) {
-        plants.add(PlantDataModel.fromJson(item));
-      });
+      for (var element in plantsData) {
+        plants.add(PlantDataModel.fromJson(element));
+      }
     }
     if (storage.hasData("plants")) {
     } else {
@@ -37,18 +36,18 @@ class AllData {
 
   addDataToCart({required PlantDataModel plant}) async {
     cart.add(plant);
-    List plantModelMap = [];
+    List plantModel = [];
     cart.forEach((element) {
-      plantModelMap.add(element.toJson());
+      plantModel.add(element.toJson());
     });
-    await storage.write("cart", jsonEncode(plantModelMap));
+    await storage.write("cart", jsonEncode(plantModel));
   }
 
   addToFavorite({required PlantDataModel plant}) async {
     favorite.add(plant);
     List plantModelMap = [];
     favorite.forEach((element) {
-      plantModelMap.add(element);
+      plantModelMap.add(element.toJson());
     });
     await storage.write("favorite", jsonEncode(plantModelMap));
   }
@@ -57,7 +56,7 @@ class AllData {
     saved.add(plant);
     List plantModelMap = [];
     saved.forEach((element) {
-      plantModelMap.add(element);
+      plantModelMap.add(element.toJson());
     });
     await storage.write("saved", jsonEncode(plantModelMap));
   }

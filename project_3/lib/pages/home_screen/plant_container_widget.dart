@@ -99,7 +99,7 @@ class _PlantDisplayState extends State<PlantDisplay> {
           ),
         ),
         Positioned(
-          top: 150,
+          top: 160,
           left: 150,
           child: IconButton(
               icon: widget.isFavourite
@@ -112,23 +112,27 @@ class _PlantDisplayState extends State<PlantDisplay> {
                       color: Color.fromARGB(255, 0, 33, 64),
                     ),
               onPressed: () {
-                setState(() {
-                  widget.isFavourite = !widget.isFavourite;
-                  if (widget.isFavourite == true) {
-                    GetIt.I.get<AllData>().addToFavorite(plant: widget.plant);
-                  }
-                  if (widget.isFavourite == false) {
-                    GetIt.I.get<AllData>().deleteFavorite(plant: widget.plant);
-                  }
-                });
+                widget.isFavourite = !widget.isFavourite;
+                if (widget.isFavourite == true) {
+                GetIt.I.get<AllData>().addToFavorite(plant: widget.plant);
+                }
+                if (widget.isFavourite == false) {
+                  GetIt.I.get<AllData>().deleteFavorite(plant: widget.plant);
+                }
+                setState(() {});
               }),
         ),
         Positioned(
-          top: 140,
+          top: 150,
           left: 200,
           child: InkWell(
             onTap: () {
-              GetIt.I.get<AllData>().addDataToCart(plant: widget.plant);
+              if (GetIt.I.get<AllData>().cart.contains(widget.plant)) {
+                widget.plant.quntity++;
+              } else {
+                GetIt.I.get<AllData>().addDataToCart(plant: widget.plant);
+                setState(() {});
+              }
             },
             child: Image.asset("assets/cart.png"),
           ),
